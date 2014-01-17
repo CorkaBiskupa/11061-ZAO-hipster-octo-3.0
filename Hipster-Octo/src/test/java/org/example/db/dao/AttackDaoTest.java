@@ -18,7 +18,7 @@ import org.junit.Test;
 
 public class AttackDaoTest {
 	
-	AttackDao dao;
+	HsqlAttackDao dao;
 
 	Connection connection = null;
 	private Statement drop;
@@ -27,11 +27,13 @@ public class AttackDaoTest {
 	public static void initialize()
 	{}
 
+	public void setUp () {
 	Attack o = new Attack();
 	o.setCity("Kurlandia");
 	o.setStreet("Escheira");
 	o.setLocalNumber(34);
 	o.setPostalCode("1234");
+	o.setHouseNumber ("323");
 	try {
 
 		HsqlUnitOfWork uow = new HsqlUnitOfWork();
@@ -44,8 +46,7 @@ public class AttackDaoTest {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
-	
-}
+	}
 
 @After
 public void teardown()
@@ -70,14 +71,17 @@ public void testGet() {
 	Attack o2 = dao.get(2);
 	Attack o3 = dao.get(0);
 	
-	assertNotNull("Zwrócono null mimo ze obiekt jest w bazie",c1);
-	assertNull("zwrócono wartosc mimo, że nie ma takiego obiektu w bazie",c2);
-	assertTrue(o1.getEmail().equals("a@wp.pl"));
+	assertNotNull("Zwrócono null mimo ze obiekt jest w bazie",o1);
+	assertNull("zwrócono wartosc mimo, że nie ma takiego obiektu w bazie",o2);
 	
-	assertEquals(o1.getName(),"Jan");
-	assertEquals(o1.getSurname(), "Nowak");
-	assertEquals(o1.getNumber(),"1234");
 	
-	assertNotSame(c1,c3);
+	assertEquals(o1.getCity(),"Kurlandia");
+	assertEquals(o1.getStreet(),"Escheira");
+	assertEquals(o1.getLocalNumber(),34);
+	assertEquals(o1.getPostalCode(),"1234");
+	assertEquals(o1.getHouseNumber (),"323");
+	
+	
+	assertNotSame(o1,o3);
 	
 }}

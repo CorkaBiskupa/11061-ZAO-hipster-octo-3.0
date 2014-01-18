@@ -6,7 +6,7 @@ import java.util.List;
 import org.example.db.EntityBase;
 import org.example.db.MockDb;
 import org.example.list.Octo;
-//koment
+
 public abstract class MockOctoDaoImpl implements OctoDao{
 
 	private MockDb db;
@@ -56,25 +56,7 @@ public abstract class MockOctoDaoImpl implements OctoDao{
 		return null;
 	}
 
-	public void setAddresses(Octo c) {
-		
-		
-	}
 
-	public void setOrders(Octo c) {
-		
-		
-	}
-
-	//public void update(Octo ent) {
-		// TODO Auto-generated method stub
-		
-	//}
-
-	//public void update(Octo ent) {
-		// TODO Auto-generated method stub
-		
-	//}
 
 	public void setAttacks(Octo c) {
 		// TODO Auto-generated method stub

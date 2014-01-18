@@ -6,5 +6,5 @@ import org.example.list.Octo;
 public interface OctoDao extends Dao<Octo>{
 	
 	public void setAttacks(Octo c);
-	//public void setOrders(Octo c);
+	
 }

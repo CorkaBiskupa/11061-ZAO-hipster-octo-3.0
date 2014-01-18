@@ -13,9 +13,9 @@ public class Octo extends EntityBase {
 	private String surname;
 	private String email;
 	
-	//relacja klien-adres
+	
 	public List<Attack> addresses;
-	//relacja klient-zamowienie
+	
 	public List<Character> character;
 	
 	

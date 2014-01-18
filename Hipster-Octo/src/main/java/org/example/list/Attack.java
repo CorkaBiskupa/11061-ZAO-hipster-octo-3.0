@@ -10,7 +10,7 @@ public class Attack extends EntityBase {
 	private String houseNumber;
 	private int localNumber;
 	
-	//relacja adres - klient
+
 	private Octo octo;
 	
 	

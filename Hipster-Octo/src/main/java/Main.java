@@ -64,20 +64,7 @@ public class Main {
 			uow.commit();
 			uow.close();
 			
-//			HsqlUnitOfWork uow = new HsqlUnitOfWork();
-//			AttackDao dao = new HsqlAttackDao(uow);
-//			Attack o = new Attack();
-//			o.setCity("Kurlandia");
-//			o.setStreet("Escheira");
-//			o.setLocalNumber(34);
-//			o.setPostalCode("1234");
-//			o.setHouseNumber ("323");
-//			Attack o1 = new Attack();
-//			o1.setId(0);
-//			dao.delete(o1);
-//			dao.save(o);
-//			uow.commit();
-//			uow.close();
+			
 			
 		System.out.println("koniec");
 	}
